@@ -72,8 +72,8 @@ insert into Student( name, gender, birthday, email, point, username, class_id) v
 ('nguyen van a', '1', '1981-12-12', 'avn@gmail.com', NULL, NULL, NULL),
 ('tran van b', '1', '1981-12-12', 'btv@gmail.com', 5, NULL, NULL);
 
-select Student.name as StudentName,
-	class.name as ClassName
+select  Student.name as StudentName,
+		class.name as ClassName
 from Student left join class on Student.class_id = class.id;
 select * from Student
 where name like 'nguyen%';
@@ -90,18 +90,11 @@ where point in(4,6,8);
 select point, count(*) as StudentCount
 from student
 group by point;
-SELECT 
-    point, 
-    COUNT(*) AS StudentCount 
-FROM 
-    Student 
-WHERE 
-    point > 5 
-GROUP BY 
-    point;
-    SELECT 
-    point, 
-    COUNT(*) AS StudentCount 
+SELECT point, COUNT(*) AS StudentCount 
+FROM Student 
+WHERE point > 5 
+GROUP BY point;
+SELECT point, COUNT(*) AS StudentCount 
 FROM Student 
 WHERE point > 5 
 GROUP BY point
@@ -114,3 +107,10 @@ FROM Student
 JOIN class ON Student.class_id = class.id
 WHERE class.name = 'c1121g1'
 ORDER BY Student.point DESC;
+
+-- hiển thi tất cả các sinh viên có tên bắt đàu bằng ký tự 'h'
+select * from Student
+where name like 'h%';
+-- hiển thị thông tin lớp ohjc có thời gian bắt đầu từ tháng 12
+select * from class
+where name 
