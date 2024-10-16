@@ -83,3 +83,34 @@ select * from Student
 where name like '%hai%' or name like '%huynh%';
 select * from Student 
 where name like 'chung%';
+select * from Student
+where point > 5;
+select * from Student
+where point in(4,6,8);
+select point, count(*) as StudentCount
+from student
+group by point;
+SELECT 
+    point, 
+    COUNT(*) AS StudentCount 
+FROM 
+    Student 
+WHERE 
+    point > 5 
+GROUP BY 
+    point;
+    SELECT 
+    point, 
+    COUNT(*) AS StudentCount 
+FROM Student 
+WHERE point > 5 
+GROUP BY point
+HAVING COUNT(*) >= 2;
+SELECT 
+    Student.name AS StudentName, 
+    Student.point, 
+    class.name AS ClassName
+FROM Student
+JOIN class ON Student.class_id = class.id
+WHERE class.name = 'c1121g1'
+ORDER BY Student.point DESC;
