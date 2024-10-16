@@ -9,13 +9,19 @@ create table if not exists phieu_xuat(
     ngay_xuat date
 );
 create table if not exists nha_cung_cap(
-	ma_nha_cung_cap int,
+	ma_nha_cung_cap int primary key,
     ten_ncc varchar(50) not null,
-    dia_chi varchar(100),
-    sdt varchar(10) not null
+    dia_chi varchar(100)
+    
+);
+create table if not exists so_dien_thoai(
+	id int primary key auto_increment,
+    nha_cung_cap_id int ,
+    so_dien_thoai varchar(10) not null,
+	foreign key (nha_cung_cap_id) references nha_cung_cap(ma_nha_cung_cap)
 );
 create table if not exists don_dat_hang(
-	so_don_hang int primary key,
+	so_don_hang int primary key,	
     ngay_dat_hang date
 );
 create table vat_tu(
@@ -40,17 +46,13 @@ primary key (ma_vat_tu,so_phieu_xuat),
 foreign key (ma_vat_tu) references vat_tu(ma_vat_tu),
 foreign key (so_phieu_xuat) references phieu_xuat(so_phieu_xuat)
  );
- create table if not exists don_dat_hang(
- so_dat_hang int primary key auto_increment,
- ngay date
- );
  
  create table if not exists chi_tiet_dat_hang(
  so_dat_hang int ,
  ma_vat_tu int ,
  so_luong float,
  primary key (so_dat_hang,ma_vat_tu),
- foreign key (so_dat_hang) references don_dat_hang(so_dat_hang),
+ foreign key (so_dat_hang) references don_dat_hang(so_don_hang),
  foreign key (ma_vat_tu) references vat_tu(ma_vat_tu)
  );
 

@@ -72,6 +72,14 @@ insert into Student( name, gender, birthday, email, point, username, class_id) v
 ('nguyen van a', '1', '1981-12-12', 'avn@gmail.com', NULL, NULL, NULL),
 ('tran van b', '1', '1981-12-12', 'btv@gmail.com', 5, NULL, NULL);
 
-
-
-
+select Student.name as StudentName,
+	class.name as ClassName
+from Student left join class on Student.class_id = class.id;
+select * from Student
+where name like 'nguyen%';
+select * from Student
+where name = 'nguyen minh hai';
+select * from Student
+where name like '%hai%' or name like '%huynh%';
+select * from Student 
+where name like 'chung%';
