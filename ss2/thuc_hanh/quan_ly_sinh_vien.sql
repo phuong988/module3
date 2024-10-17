@@ -99,3 +99,27 @@ from Student S
 join Subject Sub on S.id = Sub.id
 join Mark M on Sub.id = M.Student_id
 order by M.mark desc, s.name asc; 
+
+-- Hiển thị số lượng sinh viên ở từng nơi
+select address, count(*) as StudentCount
+ from Student
+ group by address;
+
+-- Tính điểm trung bình các môn học của mỗi học viên
+select S.id StudentID, S.name StudentName, avg(M.mark) as AverageMark
+from Student S
+join Mark M on S.id = M.Student_id
+group by S.id;
+-- Hiển thị những bạn học viên co điểm trung bình các môn học lớn hơn 15
+select  S.id StudentID, S.name StudentName, avg(M.mark) AverageMark
+from Student S
+join Mark M on S.id = M.Student_id
+group by S.id
+having avg(M.mark) >15;
+-- Hiển thị thông tin các học viên có điểm trung bình lớn nhất.
+select  S.id StudentID, S.name StudentName, avg(M.mark) AverageMark
+from Student S
+join Mark M on S.id = M.Student_id
+group by S.id
+having avg(M.mark) >= All(select avg(Mark) from Mark Group by Mark.Student_id);
+

@@ -46,7 +46,7 @@ from Custommer C
 join `Order` on C.id = O.Customer_id
 join orderDetail on O.id = OD.order_id
 join Product on OD.Product_id = P.id
-order by Customer.name;  
+order by Customer.id;  
 
 -- Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào
 SELECT C.name
@@ -61,4 +61,4 @@ SELECT o.id AS Order_ID,
 FROM `Order` o
 JOIN OrderDetail od ON o.id = od.Order_id
 JOIN Product p ON od.Product_id = p.id
-GROUP BY o.id, o.date;
+GROUP BY o.id;

@@ -114,12 +114,50 @@ from class
 left join Student on class.id = Student.class_id
 group by class.name;
 
+
+select class.name ClassName, count(Student.id) StudentCount
+from class
+left join Student on class.id = Student.class_id
+group by class.name;
+
 -- 2. Tính điểm lớn nhất của mỗi các lớp
+select Class.name as ClassName, max(Student.point) as MaxPointOfStudent
+from class
+join Student on class.id = student.Class_id
+group by class.name;
 
 -- 3. Tình điểm trung bình  của từng lớp
+select class.name,avg(point) as avg_point
+from Class
+join Student on class.id = Student.class_id
+group by class.name; 
+
 -- 4. Lấy ra toàn bộ tên và ngày sinh các instructor và student ở CodeGym.
+-- cach 1:
+SELECT name, birthday 
+FROM Student
+UNION (SELECT name, birthday FROM instructor);
+-- cach 2
+
+
 -- 5. Lấy ra top 3 học viên có điểm cao nhất của trung tâm.
+select * from student s
+order by point desc
+limit 3;
+
+
+
 -- 6. Lấy ra các học viên có điểm số là cao nhất của trung tâm.
+SELECT name, point 
+FROM Student
+WHERE point = (SELECT MAX(point) FROM Student);
 -- 7. lấy ra tất cả các giảng viên chưa từng tham gia giảng dạy 
+SELECT instructor.name, ic.instructor_id 
+FROM instructor i
+LEFT JOIN instructor_class ic ON instructor.id = ic.instructor_id
+WHERE ic.instructor_id IS NULL;
+
+-- casch 2: select * from import table from i
+-- where i.id not in(sekect ic.intrcu tion_id from i_c ic ground by ic.i_id
 
 
