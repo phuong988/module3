@@ -1,5 +1,5 @@
-create database QuanLyBanHang;
-use QuanLyBanHang;
+create database quan_ly_ban_hang;
+use quan_ly_ban_hang;
 create table Customer(
 	id int primary key,
     name varchar(50) not  null,

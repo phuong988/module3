@@ -108,9 +108,18 @@ JOIN class ON Student.class_id = class.id
 WHERE class.name = 'c1121g1'
 ORDER BY Student.point DESC;
 
--- hiển thi tất cả các sinh viên có tên bắt đàu bằng ký tự 'h'
-select * from Student
-where name like 'h%';
--- hiển thị thông tin lớp ohjc có thời gian bắt đầu từ tháng 12
-select * from class
-where name 
+-- 1.Hiện thị danh sách các lớp có học viên theo học và số lượng học viên của mỗi lớp
+select class.name as ClassName, count(Student.id) as StudentCount
+from class
+left join Student on class.id = Student.class_id
+group by class.name;
+
+-- 2. Tính điểm lớn nhất của mỗi các lớp
+
+-- 3. Tình điểm trung bình  của từng lớp
+-- 4. Lấy ra toàn bộ tên và ngày sinh các instructor và student ở CodeGym.
+-- 5. Lấy ra top 3 học viên có điểm cao nhất của trung tâm.
+-- 6. Lấy ra các học viên có điểm số là cao nhất của trung tâm.
+-- 7. lấy ra tất cả các giảng viên chưa từng tham gia giảng dạy 
+
+
