@@ -348,4 +348,39 @@ GROUP BY hd.ma_hop_dong;
 -- 19.Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
 
 -- 20.Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống, thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
-
+SELECT 
+    ma_nhan_vien AS id, 
+    ho_ten, 
+    email, 
+    so_dien_thoai, 
+    ngay_sinh, 
+    dia_chi
+FROM nhan_vien
+UNION ALL
+SELECT 
+    ma_khach_hang AS id, 
+    ho_ten, 
+    email, 
+    so_dien_thoai, 
+    ngay_sinh, 
+    dia_chi
+FROM khach_hang;
+-- 21.	Tạo khung nhìn có tên là v_nhan_vien để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu” và đã từng lập hợp đồng cho một hoặc nhiều khách hàng bất kì với ngày lập hợp đồng là “12/12/2019”.
+CREATE VIEW v_nhan_vien AS
+SELECT 
+    nv.ma_nhan_vien, 
+    nv.ho_ten, 
+    nv.email, 
+    nv.so_dien_thoai, 
+    nv.ngay_sinh, 
+    nv.dia_chi
+FROM nhan_vien nv
+JOIN hop_dong hd ON nv.ma_nhan_vien = hd.ma_nhan_vien
+WHERE nv.dia_chi = 'Hải Châu'
+AND DATE(hd.ngay_lam_hop_dong) = '2019-12-12';
+-- 22.Thông qua khung nhìn v_nhan_vien thực hiện cập nhật địa chỉ thành “Liên Chiểu” đối với tất cả các nhân viên được nhìn thấy bởi khung nhìn này.
+UPDATE nhan_vien 
+SET dia_chi = 'Liên Chiểu'
+WHERE ma_nhan_vien IN (
+    SELECT ma_nhan_vien FROM v_nhan_vien
+);
