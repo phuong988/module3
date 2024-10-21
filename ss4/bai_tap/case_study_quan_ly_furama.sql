@@ -365,7 +365,7 @@ SELECT
     ngay_sinh, 
     dia_chi
 FROM khach_hang;
--- 21.	Tạo khung nhìn có tên là v_nhan_vien để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu” và đã từng lập hợp đồng cho một hoặc nhiều khách hàng bất kì với ngày lập hợp đồng là “12/12/2019”.
+-- 21.	Tạo khung nhìn có tên là v_nhan_vien để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Nguyễn Tất Thành” và đã từng lập hợp đồng cho một hoặc nhiều khách hàng bất kì với ngày lập hợp đồng là “12/12/2019”.
 CREATE VIEW v_nhan_vien AS
 SELECT 
     nv.ma_nhan_vien, 
@@ -378,9 +378,17 @@ FROM nhan_vien nv
 JOIN hop_dong hd ON nv.ma_nhan_vien = hd.ma_nhan_vien
 WHERE nv.dia_chi = 'Hải Châu'
 AND DATE(hd.ngay_lam_hop_dong) = '2019-12-12';
+select* from v_nhan_vien;
 -- 22.Thông qua khung nhìn v_nhan_vien thực hiện cập nhật địa chỉ thành “Liên Chiểu” đối với tất cả các nhân viên được nhìn thấy bởi khung nhìn này.
-UPDATE nhan_vien 
+UPDATE nhan_vien
 SET dia_chi = 'Liên Chiểu'
 WHERE ma_nhan_vien IN (
-    SELECT ma_nhan_vien FROM v_nhan_vien
+    SELECT ma_nhan_vien 
+    FROM (
+        SELECT nhan_vien.ma_nhan_vien
+        FROM nhan_vien
+        JOIN hop_dong ON nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
+        WHERE nhan_vien.dia_chi = 'Hải Châu' 
+        AND hop_dong.ngay_lam_hop_dong = '2019-12-12'
+    ) AS temp
 );
