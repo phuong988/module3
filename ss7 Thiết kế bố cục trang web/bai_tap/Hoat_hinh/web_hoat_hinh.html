@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Page</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .header {
+      background-color: #7952b3;
+      color: orange;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed; /* Giữ cố định header */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000; /* Đảm bảo header ở trên cùng */
+    }
+
+    .header ul {
+      list-style-type: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header ul li {
+      margin: 0 10px;
+    }
+
+    .container {
+      display: flex;
+      margin-top: 60px; /* Để tránh che khuất bởi header */
+      flex-grow: 1;
+    }
+
+    .left-content, .right-content {
+      background-color: #c1d6cc;
+      padding: 20px;
+    }
+
+    .left-content {
+      width: 250px;
+      overflow-y: auto; /* Cuộn nếu nội dung quá dài */
+    }
+
+    .video-item {
+      margin-bottom: 20px; /* Khoảng cách giữa các video */
+      cursor: pointer; /* Thay đổi con trỏ khi hover */
+    }
+
+    .center-content {
+      flex-grow: 1;
+      background-color: #7abaff;
+      padding: 20px;
+    }
+
+    .footer {
+      background-color: #d3d6d8;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-content {
+        width: 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Videos</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="logo">Logo</div>
+</div>
+
+<div class="container">
+  <aside class="left-content">
+    <h2>Video List</h2>
+    <div class="video-item" onclick="loadVideo('video1')">
+      <iframe width="100%" height="150" src="https://www.youtube.com/watch?v=I6Y24q6ytB0&t=7431s" frameborder="0" allowfullscreen></iframe>
+      <p>Video 1 Title</p>
+    </div>
+    <div class="video-item" onclick="loadVideo('video2')">
+      <iframe width="100%" height="150" src="https://vuighe3.com/dragon-ball-daima/tap-2-glorio" frameborder="0" allowfullscreen></iframe>
+      <p>Video 2 Title</p>
+    </div>
+    <div class="video-item" onclick="loadVideo('video3')">
+      <iframe width="100%" height="150" src="https://www.youtube.com/watch?v=tejTzhHC41s" frameborder="0" allowfullscreen></iframe>
+      <p>Video 3 Title</p>
+    </div>
+  </aside>
+
+  <main class="center-content">
+    <h2>Selected Video</h2>
+    <div id="video-player">
+      <iframe id="video-iframe" width="100%" height="315" src="https://vuighe3.com/dragon-ball-super/tap-130-tran-quyet-dinh-lon-nhat-tran-chien-song-con-cuoi-cung" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div id="video-description">
+      <p id="description-text">Mô tả về Video 1 ở đây. Video này nói về...</p>
+    </div>
+  </main>
+
+  <aside class="right-content">
+    <h2>Advertisements</h2>
+    <ul>
+      <li><a href="#">Quảng cáo 1</a></li>
+      <li><a href="#">Quảng cáo 2</a></li>
+      <li><a href="#">Quảng cáo 3</a></li>
+    </ul>
+  </aside>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+</footer>
+
+<script>
+  function loadVideo(video) {
+    const videoData = {
+      video1: {
+        src: 'https://www.youtube.com/watch?v=I6Y24q6ytB0&t=7431s',
+        description: 'Mô tả về Video 1 ở đây.'
+      },
+      video2: {
+        src: 'https://vuighe3.com/dragon-ball-daima/tap-2-glorio',
+        description: 'Mô tả về Video 2 ở đây.'
+      },
+      video3: {
+        src: 'https://www.youtube.com/watch?v=tejTzhHC41s',
+        description: 'Mô tả về Video 3 ở đây.'
+      }
+    };
+
+    document.getElementById('video-iframe').src = videoData[video].src;
+    document.getElementById('description-text').innerText = videoData[video].description;
+  }
+</script>
+
+</body>
+</html>
