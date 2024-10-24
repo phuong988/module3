@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9166b78c-33fb-46e8-b6f4-505fe93f7b48" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/showtimes/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6.css/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6.css/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6.css/.idea/ss6.css.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6.css/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6.css/bai_tap/dinh_dang_van_ban_voi_css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6.css/bai_tap/nhung_css_vao_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6.css/bai_tap/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6.css/bai_tap/tao_trang_doc_truyen/truyen_ngan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6.css/bai_tap/tao_trang_doc_truyen/yourname.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6.css/thuc_hanh/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/.idea/ss7 Thiết kế bố cục trang web.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/bai_tap/Hoat_hinh/web_hoat_hinh.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/bai_tap/css.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/bai_tap/tao_layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/bai_tap/tao_layout_voi_rwd/layout_with_RWD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/bai_tap/tao_layout_voi_rwd/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/thuc_hanh/Menu_doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/thuc_hanh/Style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/thuc_hanh/box.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/thuc_hanh/box_model.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/thuc_hanh/menu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/thuc_hanh/menuNgang.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/thuc_hanh/menu_ngang.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7 Thiết kế bố cục trang web/thuc_hanh/trello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss8_bootstrap/New folder/bootstrap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss8_bootstrap/New folder/form_dang_nhap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss8_bootstrap/New folder/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss8_bootstrap/New folder/test/form.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2nrrRIZ6bGTCxh2ivc9MMgYcVBR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "C0724I1__module2",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9166b78c-33fb-46e8-b6f4-505fe93f7b48" name="Changes" comment="" />
+      <created>1729742029527</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729742029527</updated>
+      <workItem from="1729742030582" duration="41000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
