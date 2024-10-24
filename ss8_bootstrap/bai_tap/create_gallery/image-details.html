@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Details</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+<h2>Image Details</h2>
+<img id="image" src="#" alt="Selected Image">
+<div>
+    <a class="back-button" href="bootstrap_gallery.html" style="color:orangered;">Back to Gallery</a>
+</div>
+
+<script>
+    // Lấy query parameter từ URL.
+    const urlParams = new URLSearchParams(window.location.search);
+    const imageUrl = urlParams.get('image');
+
+    // Kiểm tra nếu URL ảnh tồn tại, nếu không thì hiển thị thông báo lỗi.
+    if (imageUrl) {
+        document.getElementById('image').src = decodeURIComponent(imageUrl);
+    } else {
+        document.body.innerHTML = '<h3>Image not found</h3><a class="back-button" href="bootstrap_gallery.html">Back to Gallery</a>';
+    }
+</script>
+</body>
+</html>
