@@ -1,22 +1,22 @@
-package com.example.user_manager.model;
+package com.example.Student_manager.model;
 
-public class User {
+public class Student {
     protected int id;
     protected String name;
     protected String email;
     protected String country;
 
-    public User() {
+    public Student() {
     }
 
-    public User(String name, String email, String country) {
+    public Student(String name, String email, String country) {
         super();
         this.name = name;
         this.email = email;
         this.country = country;
     }
 
-    public User(int id, String name, String email, String country) {
+    public Student(int id, String name, String email, String country) {
         super();
         this.id = id;
         this.name = name;

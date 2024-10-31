@@ -1,12 +1,10 @@
-package com.example.quan_ly_user.dao;
+package com.example.usermanager.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class UserDao {
-
-    private String jdbcURL = "jdbc:mysql://localhost:3306/user";
+public class UserDao {    private String jdbcURL = "jdbc:mysql://localhost:3306/user";
     private String jdbcUsername = "root";
     private String jdbcPassword = "codegym";
 
@@ -25,5 +23,6 @@ public class UserDao {
         }
         return connection;
     }
+
 
 }

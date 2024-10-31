@@ -1,4 +1,4 @@
-package com.example.user_manager;
+package com.example.Student_manager;
 
 import java.io.*;
 import javax.servlet.http.*;
