@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.sql.*;
 
-import static java.sql.DriverManager.getConnection;
 
 public class UserRepository implements IUserRepository {
     private static final String URL ="jdbc:mysql://localhost:3306/demo_users";
