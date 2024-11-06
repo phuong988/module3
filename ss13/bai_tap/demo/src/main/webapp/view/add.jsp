@@ -1,40 +1,37 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ASUS
-  Date: 11/6/2024
-  Time: 8:08 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Add Product</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://boostrap520/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://datatables/css/datatables.bootstrap5.min.css"/>
 </head>
 <body>
-<form id="addProduct" action="product?action=add" method="post">
-    <h1>Thêm phong trọ</h1>
-    <label>Nhập mã phòng trọ:</label>
-    <input type="text" name="code" id="code" />
-    <label>Nhập tên người thuê </label>
-    <input type="text" name="name" placeholder="tên người thuê"><br>
-    <label></label>
-    <select name="unit">
-        <option value="kg">kg</option>
-        <option value="Bó">Bó</option>
+<h2>Thêm mới</h2>
+<form action="/phongtro?action=add" method="post">
+    <span>tên người thuee</span>
+    <input type="text" name="tenNguoiThue" pattern="^[A-Za-z ]{5,50}$"
+           minlength="5" maxlength="50" required
+           title="Tên người thuê chỉ được chứa chữ cái và khoảng trắng, độ dài từ 5 đến 50 ký tự."><br>
+    <span>số điện thoại</span>
+    <input type="text" name="soDienThoai" pattern="^\d{10}$"
+           maxlength="10" minlength="10" required
+           title="Số điện thoại phải chỉ chứa 10 chữ số."><br>
+    <span>ngaày thuê</span>
+    <input type="text"  name="ngayThue"required><br>
+    <span>hình thức</span>
+    <select id="hinhThucThue" name="hinhThucThue" required>
+        <option value="" disabled selected>Chọn hình thức thanh toán</option>
+        <option value="theo_thang">Theo tháng</option>
+        <option value="theo_quy">Theo quý</option>
+        <option value="theo_nam">Theo năm</option>
     </select><br>
-    <label>Nhập giá:</label>
-    <input type="number" name="price" id="price" min="1000" step="1"
-           required title="Giá phải là số nguyên dương và lớn hơn hoặc bằng 1.000 VNĐ."><br>
-    <label>Chọn loại sản phẩm</label>
-    <select name="categoryId">
-        <c:forEach items="${categories}" var="category">
-            <option value="${category.id}">${category.name}</option>
-        </c:forEach>
-    </select><br>
-    <label>Nhập ngày thu hoạch(năm-tháng-ngày)</label>
-    <input type="text" name="harvestDay" placeholder="2024-10-23">
-    <button type="submit">Thêm</button>
+    <span>ghi chú</span>
+    <input type="text" name="ghiChu" maxlength="200"  title="Không quá 200 ký tự."><br>
+    <button type="submit">Save</button>
 </form>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

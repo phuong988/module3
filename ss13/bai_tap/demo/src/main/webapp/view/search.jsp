@@ -1,44 +1,31 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ASUS
-  Date: 11/6/2024
-  Time: 8:08 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Search name product</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://boostrap520/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://datatables/css/datatables.bootstrap5.min.css"/>
 </head>
 <body>
-<form action="product?action=search" method="post">
-    <h1>Tìm kiếm theo tên sản phẩm</h1>
-    <label>Nhập tên sản phẩm:</label>
-    <input type="text" name="name" placeholder="Rau muống">
-    <input type="submit" value="Tìm kiếm">
-</form>
-
-<table border="1">
+<h1>DANH SÁCH</h1>
+<table>
     <tr>
-        <th>Stt</th>
-        <th>Mã Hàng Hoá</th>
-        <th>Tên Hàng Hoá</th>
-        <th>Đơn vị tính</th>
-        <th>Giá</th>
-        <th>Loại hàng hoá</th>
-        <th>Ngày thu hoạch</th>
+        <th>Mã</th>
+        <th>Tên người thuê</th>
+        <th>Số điện thoại</th>
+        <th>Ngày thuê</th>
+        <th>Hình thức</th>
+        <th>Ghi chú</th>
     </tr>
-    <c:forEach items="${searchList}" var="product" varStatus="status">
+    <c:forEach var="phongTro" items="${phongTros}">
         <tr>
-            <td>${status.count}</td>
-            <td>${product.code}</td>
-            <td>${product.name}</td>
-            <td>${product.unit}</td>
-            <td>${product.price}</td>
-            <td>${product.categoryName}</td>
-            <td>${product.harvestDay}</td>
+            <td>${phongTro.maPhongTro}</td>
+            <td>${phongTro.tenNguoiThue}</td>
+            <td>${phongTro.soDienThoai}</td>
+            <td>${phongTro.ngayThue}</td>
+            <td>${phongTro.hinhThucThue}</td>
+            <td>${phongTro.ghiChu}</td>
         </tr>
     </c:forEach>
 </table>

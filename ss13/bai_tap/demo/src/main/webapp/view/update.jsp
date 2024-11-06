@@ -9,8 +9,7 @@
 <html>
 <head>
     <title>Title</title>
-</head>
-<body>
+</head><body>
 
 </body>
 </html>
